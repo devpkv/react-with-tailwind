@@ -13,6 +13,10 @@ function Dashboard() {
     const [searchParam, setSearchParam] = useSearchParams("");
     console.log("Search Params:", searchParam);
     const topic = searchParam.get("topic") || "general";
+
+    const urlParams = new URLSearchParams(window.location.search);
+    console.log("URL Params:", urlParams);
+
     const handleSearchTopics = (newTopic) => {
         // Simulate a search operation
         setSearchParam({ topic: newTopic });
